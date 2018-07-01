@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8"/>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+       <meta name="description" content="Currency convert"/>
+      <title>currencyConvert</title>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+     
+<!-- JSON files -->
+
+<link rel="manifest" href="manifest.json" >
+	
+	
+
+
+
+
+      <style>
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+                #Topwrapper {
+                    background: linear-gradient( rgb(60, 60, 119), grey);
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    height: 25%;
+                    margin:10px;
+                     
+                }
+    
+                 #Topwrapper1 {
+                    background: linear-gradient( rgb(60, 60, 119), grey);
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    height: 20%;
+                    
+                    margin:10px; 
+                }
+    
+                #MidWrapper{
+                    width: 50%;
+                    height: 20%;
+                    border: 5px solid black;
+                    clear: both;
+                    align-content: center;
+    
+                }
+        
+        </style>
+
+
+
+
+   </head>
+   <body>
+
+
+        <div id="Topwrapper" align="center">
+                <marquee style="color:white;">Welcome to CunrencyVerter</marquee>
+                   </div>
+
+       <div class="container main-content">
+           <div class="col offset-md-4 col-md-4">
+               <div class="row header">
+                   <h2 class="text-center">Currency Convert</h2>
+               </div>
+               <div class="row">
+                    <div class="col"><b style="color:red;">Amount:</b>
+                        <input type="text" class="form-control" placeholder="Enter currency amount" id="currency" style="border-color:red;">
+                    </div>
+               </div>
+
+
+               
+                    <div>From</div> <br>
+
+                    
+                       <select id="from" ></select>
+                   
+                    <br> 
+                   <p><div>To</div> </p>
+                 
+                         <select id="to"></select>
+                    
+                    <button id="convert" style="color:white; background-color:rgba(3, 3, 102, 0.904);">Convert</button>
+                    <div class="results">
+                        <input id="final" type="text" class="form-control" placeholder="Enter amount">
+                    </div>
+                </div>
+            </div>
+
+                   
+
+
+           </div>
+
+           <div id="Topwrapper" align="center">
+                <marquee style="color:white;">Thank you for using our currency converter</marquee>
+                   </div>
+        </div>
+
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <script src="scripts/app.js"></script>
+
+
+
+       <script src="scripts/app.js"></script>
+
+       <!-- Service worker script, Note: Script can be put seperately -->
+       
+       <script>
+       if ('serviceWorker' in navigator) {
+         navigator.serviceWorker.register('/sw.js')
+           .then(function() {
+             console.log('SW registered');
+           });
+       }
+       
+
+self.addEventListener('activate', function () {
+    console.log('SW Activated');
+  });
+       </script>
+           
+           
+
+
+
+
+
+   </body>
+</html>
